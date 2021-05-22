@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                         .show();
             }
         });
-//подсказка
+        //подсказка
         promptInfo = new BiometricPrompt.PromptInfo.Builder()
                 .setTitle("Biometric login for my app")
                 .setSubtitle("Log in using your biometric credential")

@@ -9,4 +9,7 @@
     <string name="descriptions">Descriptions</string>
     <string name="title">Title</string>
     <string name="save">Save</string>
+    <string name="add_field">Fill in the fields</string>
+    <string name="add_title">Fill in the title</string>
+    <string name="add_desc">Fill in the description</string>
 </resources>

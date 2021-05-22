@@ -9,4 +9,7 @@
     <string name="descriptions">Описание</string>
     <string name="title">Заголовок</string>
     <string name="save">Сохранить</string>
+    <string name="add_field">Заполните все поля</string>
+    <string name="add_title">Заполните поел заголовка</string>
+    <string name="add_desc">Заполните поле описания</string>
 </resources>

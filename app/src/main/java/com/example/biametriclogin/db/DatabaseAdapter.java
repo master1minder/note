@@ -16,21 +16,21 @@ public class DatabaseAdapter {
     public DatabaseAdapter(Context context){
         dbHelper = new DatabaseHelper(context.getApplicationContext());
     }
-//открытие бд
+    //открытие бд
     public DatabaseAdapter open(){
         database = dbHelper.getWritableDatabase();
         return this;
     }
-//закрытие бд
+    //закрытие бд
     public void close(){
         dbHelper.close();
     }
-//получение всех сущностей бд
+    //получение всех сущностей бд
     private Cursor getAllEntries(){
         String[] columns = new String[] {DatabaseHelper.ID, DatabaseHelper.TITLE, DatabaseHelper.DESC};
         return  database.query(DatabaseHelper.TABLE, columns, null, null, null, null, null);
     }
-//записи приводяться в стандарт для того чтобы в последующем их было проще вывести через listview
+    //записи приводяться в стандарт для того чтобы в последующем их было проще вывести через listview
     public List<Note> getNotes(){
         ArrayList<Note> notes = new ArrayList<>();
         Cursor cursor = getAllEntries();
@@ -43,11 +43,11 @@ public class DatabaseAdapter {
         cursor.close();
         return notes;
     }
-//счетчик
+    //счетчик
     public long getCount(){
         return DatabaseUtils.queryNumEntries(database, DatabaseHelper.TABLE);
     }
-//получение записи
+    //получение записи
     public Note getNote(long id){
         Note note = null;
         String query = String.format("SELECT * FROM %s WHERE %s=?",DatabaseHelper.TABLE, DatabaseHelper.ID);
@@ -60,7 +60,7 @@ public class DatabaseAdapter {
         cursor.close();
         return note;
     }
-//вставка записи в бд
+    //вставка записи в бд
     public long insert(Note note){
 
         ContentValues cv = new ContentValues();
@@ -69,14 +69,14 @@ public class DatabaseAdapter {
 
         return  database.insert(DatabaseHelper.TABLE, null, cv);
     }
-//удаление записи из бд
+    //удаление записи из бд
     public long delete(long userId){
 
         String whereClause = "_id = ?";
         String[] whereArgs = new String[]{String.valueOf(userId)};
         return database.delete(DatabaseHelper.TABLE, whereClause, whereArgs);
     }
-//обновление бд
+    //обновление бд
     public long update(Note note){
 
         String whereClause = DatabaseHelper.ID + "=" + String.valueOf(note.getId());

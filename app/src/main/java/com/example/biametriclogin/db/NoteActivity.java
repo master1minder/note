@@ -54,17 +54,17 @@ public class NoteActivity extends AppCompatActivity {
         adapter.open();
         if (Title.equals("") && Desc.equals("")) {
             //данные пустые
-            Toast.makeText(getApplicationContext(), "Fill in the fields",
+            Toast.makeText(getApplicationContext(), this.getString(R.string.add_field),
                     Toast.LENGTH_SHORT)
                     .show();
         } else if (Title.equals("")) {
-//невведен заголовок
-            Toast.makeText(getApplicationContext(), "Fill in the title",
+            //невведен заголовок
+            Toast.makeText(getApplicationContext(), this.getString(R.string.add_title),
                     Toast.LENGTH_SHORT)
                     .show();
         } else if (Desc.equals("")) {
-//невведен заголовок
-            Toast.makeText(getApplicationContext(), "Fill in the description",
+            //невведен заголовок
+            Toast.makeText(getApplicationContext(), this.getString(R.string.add_desc),
                     Toast.LENGTH_SHORT)
                     .show();
         } else if (id > 0) {
@@ -78,13 +78,9 @@ public class NoteActivity extends AppCompatActivity {
         }
 
 
-
     }
 
-
-
     public void delete(View view) {
-
         adapter.open();
         adapter.delete(id);
         adapter.close();
@@ -92,7 +88,7 @@ public class NoteActivity extends AppCompatActivity {
     }
 
     private void goHome() {
-        // переход к Note activity
+        // переход к note
         Intent intent = new Intent(this, com.example.biametriclogin.Note.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(intent);
