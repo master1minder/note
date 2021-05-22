@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NoteApp</string>
+    <string name="login">Авторизация</string>
+    <string name="register">Регистрация</string>
+    <string name="enter">Вход</string>
+    <string name="_1">1</string>
+    <string name="enter_to_password">Введите пароль</string>
+    <string name="please_enter_your_password">Пожалуйста введите пароль</string>
+    <string name="descriptions">Описание</string>
+    <string name="title">Заголовок</string>
+    <string name="save">Сохранить</string>
+</resources>

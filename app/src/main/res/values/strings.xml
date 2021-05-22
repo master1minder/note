@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NoteApp</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="enter">Enter</string>
+    <string name="_1">1</string>
+    <string name="enter_to_password">Enter to password</string>
+    <string name="please_enter_your_password">Please enter your password</string>
+    <string name="descriptions">Descriptions</string>
+    <string name="title">Title</string>
+    <string name="save">Save</string>
+</resources>
