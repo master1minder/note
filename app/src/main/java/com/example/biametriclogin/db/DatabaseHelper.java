@@ -3,7 +3,7 @@ package com.example.biametriclogin.db;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
 import android.content.Context;
-
+//класс где храняться все sql запросы к базе данных
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "notes.db"; // название бд
     private static final int SCHEMA = 2; // версия базы данных

@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.biametriclogin.R;
-
+//класс где заполняется запись
 public class NoteActivity extends AppCompatActivity {
 
     private EditText title;

@@ -7,7 +7,7 @@ import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 import java.util.List;
-
+//класс по работе с базой данных
 public class DatabaseAdapter {
 
     private DatabaseHelper dbHelper;

@@ -3,6 +3,7 @@ package com.example.biametriclogin;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -16,6 +17,7 @@ import java.util.List;
 
 public class Note extends AppCompatActivity {
     private ListView List;
+    //адаптер для работы со списком ListView
     ArrayAdapter<com.example.biametriclogin.db.Note> arrayAdapter;
 
     @Override
@@ -24,8 +26,10 @@ public class Note extends AppCompatActivity {
         setContentView(R.layout.note);
         List = findViewById(R.id.list);
 
-        List.setOnItemClickListener((parent, view, position, id) -> {
+        //слушатель списка
+        List.setOnItemClickListener((AdapterView<?> parent, View view, int position, long id) -> {
             com.example.biametriclogin.db.Note note = arrayAdapter.getItem(position);
+            //если записей нет
             if (note != null) {
                 Intent intent = new Intent(getApplicationContext(), NoteActivity.class);
                 intent.putExtra("id", note.getId());

@@ -19,7 +19,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
+//класс для регистрации
 public class Register extends AppCompatActivity {
 
     private static final String PREFS_FILE = "Account";

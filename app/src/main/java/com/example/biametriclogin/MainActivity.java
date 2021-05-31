@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import java.util.concurrent.Executor;
 
+//главный класс, где происходит авторизация
 public class MainActivity extends AppCompatActivity {
 
     private BiometricPrompt biometricPrompt;
