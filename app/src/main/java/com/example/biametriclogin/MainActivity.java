@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         settings = getSharedPreferences(PREFS_FILE, MODE_PRIVATE);
+
         Executor executor = ContextCompat.getMainExecutor(this);
         biometricPrompt = new BiometricPrompt(MainActivity.this,
                 executor, new BiometricPrompt.AuthenticationCallback() {
